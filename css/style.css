@@ -3,6 +3,7 @@
   font-family: "setoFont";
   src: url(../fonts/sjis_sp_setofont.ttf);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -66,13 +67,10 @@ body {
   font-weight: 700;
   font-size: 1.2rem;
   box-shadow: 0.2rem 0.2rem 0.5rem #3232329c;
-  /* TODO: find a fix for word underline */
-  /* text-decoration: none; */
 }
 
 .searchBar input[type="text"]:focus-visible {
   outline: none;
-
 }
 
 .searchBar input[type="text"]::placeholder {
@@ -81,6 +79,8 @@ body {
 
 .lowerPart {
   display: flex;
+  justify-content: center; /* Center the containers horizontally */
+  flex-wrap: wrap; /* Allow containers to wrap */
   background: rgba(230, 230, 250, 0.452);
   gap: 2rem;
   margin: 1rem 4rem;
@@ -97,7 +97,7 @@ ul li {
   background: #fafafa;
   box-shadow: 0.2rem 0.2rem 0.5rem #3232329c;
   border-radius: 0.3rem;
-  flex-basis: 25rem;
+  flex-basis: 25rem; /* Base width for containers */
   text-align: center;
   padding: 1rem;
 }
@@ -107,12 +107,12 @@ ul li a {
   font-weight: 650;
   text-decoration: none;
 }
-ul li a:visited {
-  color: #6b7485;
-}
+
+ul li a:visited,
 ul li a:link {
   color: #6b7485;
 }
+
 ul li a:hover {
   color: #a8b7c2;
 }
@@ -122,12 +122,14 @@ ul li a:hover {
   bottom: 0;
   width: 10rem;
 }
+
 #sticker2 {
   position: fixed;
   bottom: 50vh;
   left: 10vh;
   width: 10rem;
 }
+
 #sticker3 {
   position: fixed;
   right: 0;
